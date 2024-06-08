@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locker System</title>
+    <link href="https://fonts.googleapis.com/css?family=Belgrano&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption&display=swap" rel="stylesheet" />
+    <link href="../css/homepage.css" rel="stylesheet"/>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="logo">Locker System</div>
+            <nav>
+                <ul>
+                    <li><a href="#" id="searchLink">Search</a></li>
+                    <li><a href="#" id="reservationLink">Reservation Info</a></li>
+                    <li><a href="#" id="hotelLink">Deliver-to-Hotel</a></li>
+                    <li><a href="#" id="moreLink">More<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
+                      </svg></a>
+                    </li>
+                    <!--<li><a href="#" id="dropdown-menu"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                      </svg></a>
+                    </li>-->
+                </ul>
+            </nav>
+            <!-- Search Block -->
+            <div id="searchBlock" style="display: none;">
+                <select id="searchInput" placeholder="Search Station" list="stationNames" style="display: none; border: none">
+                    <optgroup label="Bannan Line">
+                        <option>BL01 Dingpu</option>
+                        <option>BL02 Yongning</option>
+                        <option>BL03 Tucheng</option>
+                        <option>BL04 Haishan</option>
+                        <option>BL05 Far Eastern Hospital</option>
+                        <option>BL06 Fuzhong</option>
+                        <option>BL07 Banqiao</option>
+                        <option>BL08 Xinpu</option>
+                        <option>BL09 Jiangzicui</option>
+                        <option>BL10 Longshan Temple</option>
+                        <option>BL11 Ximen</option>
+                        <option>BL12 Taipei Main Station</option>
+                        <option>BL13 Shandao Temple</option>
+                        <option>BL14 Zhongxiao Xinsheng</option>
+                        <option>BL15 Zhongxiao Fuxing</option>
+                        <option>BL16 Zhongxiao Dunhua</option>
+                        <option>BL17 Sun Yat-Sen Memorial Hall</option>
+                        <option>BL18 Taipei City Hall</option>
+                        <option>BL19 Yongchun</option>
+                        <option>BL20 Houshanpi</option>
+                        <option>BL21 Kunyang</option>
+                        <option>BL22 Nangang</option>
+                        <option>BL23 Taipei Nangang Exhibition Center</option>
+                    </optgroup>
+                    <optgroup label="Wenhu Line">
+                        <option>BR01 Taipei Zoo</option>
+                        <option>BR02 Muzha</option>
+                        <option>BR03 Wanfang Community</option>
+                        <option>BR04 Wanfang Hospital</option>
+                        <option>BR05 Xinhai</option>
+                        <option>BR06 Linguang</option>
+                        <option>BR07 Liuzhangli</option>
+                        <option>BR08 Technology Building</option>
+                        <option>BR09 Daan</option>
+                        <option>BR10 Zhongxiao Fuxing</option>
+                        <option>BR11 Nanjing Fuxing</option>
+                        <option>BR12 Zhongshan Junior High School</option>
+                        <option>BR13 Songshan Airport</option>
+                        <option>BR14 Dazhi</option>
+                        <option>BR15 Jiannan Road</option>
+                        <option>BR16 Xihu</option>
+                        <option>BR17 Gangqian</option>
+                        <option>BR18 Wende</option>
+                        <option>BR19 Neihu</option>
+                        <option>BR20 Dahu Park</option>
+                        <option>BR21 Huzhou</option>
+                        <option>BR22 Donghu</option>
+                        <option>BR23 Nangang Software Park</option>
+                        <option>BR24 Taipei Nangang Exhibition Center</option>
+                    </optgroup>
+                    <optgroup label="Tamsui-Xinyi Line">
+                        <option>R02 Xiangshan</option>
+                        <option>R03 Taipei 101/World Trade Center</option>
+                        <option>R04 Xinyi Anhe</option>
+                        <option>R05 Daan</option>
+                        <option>R06 Daan Park</option>
+                        <option>R07 Dongmen</option>
+                        <option>R08 Chiang Kai-Shek Memorial Hall</option>
+                        <option>R09 National Taiwan University Hospital</option>
+                        <option>R10 Taipei Main Station</option>
+                        <option>R11 Zhongshan</option>
+                        <option>R12 Shuanglian</option>
+                        <option>R13 Minquan West Road</option>
+                        <option>R14 Yuanshan</option>
+                        <option>R15 Jiantan</option>
+                        <option>R16 Shilin</option>
+                        <option>R17 Zhishan</option>
+                        <option>R18 Mingde</option>
+                        <option>R19 Shipai</option>
+                        <option>R20 Qilian</option>
+                        <option>R21 Qiyan</option>
+                        <option>R22 Beitou</option>
+                        <option>R23 Fuxinggang</option>
+                        <option>R24 Zhongyi</option>
+                        <option>R25 Guandu</option>
+                        <option>R26 Zhuwei</option>
+                        <option>R27 Hongshulin</option>
+                        <option>R28 Tamsui</option>
+                    </optgroup>
+                    <optgroup label="Songshan-Xindian Line">
+                        <option>G01 Xindian</option>
+                        <option>G02 Xindian District Office</option>
+                        <option>G03 Qizhang</option>
+                        <option>G04 Dapinglin</option>
+                        <option>G05 Jingmei</option>
+                        <option>G06 Wanlong</option>
+                        <option>G07 Gongguan</option>
+                        <option>G08 Taipower Building</option>
+                        <option>G09 Guting</option>
+                        <option>G10 Chiang Kai-Shek Memorial Hall</option>
+                        <option>G11 Xiaonanmen</option>
+                        <option>G12 Ximen</option>
+                        <option>G13 Beimen</option>
+                        <option>G14 Zhongshan</option>
+                        <option>G15 Songjiang Nanjing</option>
+                        <option>G16 Nanjing Fuxing</option>
+                        <option>G17 Taipei Arena</option>
+                        <option>G18 Nanjing Sanmin</option>
+                        <option>G19 Songshan</option>
+                    </optgroup>
+                    <optgroup label="Zhonghe-Xinlu Line">
+                        <option>O01 Nanshijiao</option>
+                        <option>O02 Jingan</option>
+                        <option>O03 Yongan Market</option>
+                        <option>O04 Dingxi</option>
+                        <option>O05 Guting</option>
+                        <option>O06 Dongmen</option>
+                        <option>O07 Zhongxiao Xinsheng</option>
+                        <option>O08 Songjiang Nanjing</option>
+                        <option>O09 Xingtian Temple</option>
+                        <option>O10 Zhongshan Elementary School</option>
+                        <option>O11 Minquan West Road</option>
+                        <option>O12 Daqiaotou</option>
+                        <option>O13 Taipei Bridge</option>
+                        <option>O14 Cailiao</option>
+                        <option>O15 Sanchong</option>
+                        <option>O16 Xianse Temple</option>
+                        <option>O17 Touqianzhuang</option>
+                        <option>O18 Xinzhuang</option>
+                        <option>O19 Fu Jen University</option>
+                        <option>020 Danfeng</option>
+                        <option>O21 Huilong</option>
+                    </optgroup>
+                    <optgroup label="Circular Line">
+                        <option>Y07 Dapinglin</option>
+                        <option>Y08 Shisizhang</option>
+                        <option>Y09 Xiulang Bridge</option>
+                        <option>Y10 Jingping</option>
+                        <option>Y11 Jingan</option>
+                        <option>Y12 Zhonghe</option>
+                        <option>Y13 Qiaohe</option>
+                        <option>Y14 Zhongyuan</option>
+                        <option>Y15 Banxin</option>
+                        <option>Y16 Banqiao</option>
+                        <option>Y17 Xinpu Minsheng</option>
+                        <option>Y18 Touqianzhuang</option>
+                        <option>Y19 Xingfu</option>
+                        <option>Y20 New Taipei Industrial Park</option>
+                    </optgroup>
+                </select>
+                <!-- Dropdown for suggestions -->
+                
+                <div id="searchDetails" style="display: none;">
+                    <p id="stationDetails">Station Info will appear here.</p>
+                </div>
+                
+            </div>
+            
+            <!-- Reservation info block -->
+            <div id="reservationInfo">
+                <h2>Reservation Info</h2>
+                <div id="reservationDetails">
+                  <strong>Reservation No.</strong> <span id="reservationNo">1</span><br>
+                  <strong>Station:</strong> <span id="Station">Taipei Main Station</span><br>
+                  <strong>Exit:</strong> <span id="Exit">1</span><br>
+                  <strong>Locker_ID:</strong> <span id="Locker_ID">42</span><br>
+                  <strong>Date:</strong> <span id="reservationDate">2024/06/07</span><br>
+                  <strong>Start Time:</strong> <span id="startTime">17:00</span><br>
+                  <strong>End Time:</strong> <span id="endTime">18:00</span><br>
+                  <strong>Password:</strong> <span id="password">459432</span>
+                </div>
+              </div>
+  
+              <script>
+                    // 获取当前用户信息
+                    fetch('/api/user/currentUser')
+                        .then(response => response.json())
+                        .then(user => {
+                            const userId = user.id; // 假设用户ID存储在id字段
+                            if (userId) {
+                                // 获取用户最新的预订
+                                return fetch(`/api/user/latestReservation`);
+                            } else {
+                                throw new Error('User ID not found in response');
+                            }
+                        })
+                        .then(response => response.json())
+                        .then(latestReservation => {
+                            const reservationId = latestReservation.id;
+                            // 使用获取到的reservation ID获取预订详细信息
+                            return fetch(`/api/reservation/{reservation_id}`);
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            // 将获取到的预订资料显示在HTML页面上
+                            document.getElementById('reservationNo').innerText = data.reservation_id;
+                            document.getElementById('reservationDate').innerText = data.date;
+                            document.getElementById('startTime').innerText = data.deposit_timestamp;
+                            document.getElementById('endTime').innerText = data.pick_up_timestamp;
+                            document.getElementById('password').innerText = data.password;
+                        })
+                        .catch(error => console.error('Error fetching reservation details:', error));
+
+              </script>
+            <!-- Hotel info block -->
+            <div id="hotelInfo">
+                Deliver-to-Hotel
+                <div id="hotelDetails">
+                    Grand Hyatt Taipei<br>
+                    Palais de Chine<br>
+                    Taipei Marriott Hotel<br>
+                    Mandarin Oriental Taipei<br>
+                    Regent Taipei<br>
+                    Humble House Taipei<br>
+                    The Okura Prestige Taipei Hotel<br>
+                    Sheraton Grand Taipei Hotel<br>
+                    W Taipei<br>
+                    Hotel Resonance<br>
+                </div>
+            </div>
+            <div id="more"></div>
+                <div id="linkContainer" style="display: none;">
+                    <a href="#" id="accountLink">ACCOUNT</a><br>
+                    <a href="#" id="historyLink">HISTORY</a><br>
+                    <a href="#" id="faqLink">FAQ</a><br>
+                    <a href="#" id="contactLink">CONTACT US</a><br>
+                    <a href="#" id="logoutLink">LOG OUT<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                      </svg></a><br>
+                    <a href="http://127.0.0.1:5501/src/main/resources/templates/deleteUser.html" id="deleteAccount">DELETE USER</a><br>
+                </div>
+                <div id="account" style="display: none;">
+                    <h2>ACCOUNT</h2>
+                    <div id="accountDetail">
+                        <ul style="list-style-type: none;">
+                            <li class="label">Email</li>
+                            <li class="detail">example@test.com</li>
+                        
+                            <li class="label">Password</li>
+                            <li class="detail">example</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="history" style="display: none;">
+                    <h2>HISTORY</h2>
+                    <p class="historyTitle">
+                        <strong>2024/06/07 TAIPEI MAIN STATION</strong>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                        </svg>
+                    </p>
+                    <div class="historyDetail" style="display: none;">
+                        Reservation No.1<br>
+                        Exit:1<br>
+                        Locker_ID:42<br>
+                        Date 2024/06/07<br>
+                        Start Time 17:00<br>
+                        End Time 18:00<br>
+                        Total Price $20<br>
+                    </div>
+                </div>
+                <div id="faqContainer" style="display: none;">
+                    <h2>FAQ</h2>
+                    <p class="faq-question">
+                        <strong>1. How to use this system?</strong>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                        </svg>
+                    </p>
+                    <div class="faq-answer" style="display: none;">
+                        <p>You can click on the station on the homepage map to deposit and deliver your luggage.</p>
+                    </div>
+                    <p class="faq-question">
+                        <strong>2. How to reset my password?</strong>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                        </svg>
+                    </p>
+                    <div class="faq-answer" style="display: none;">
+                        <p>You can reset your password by going to More → ACCOUNT → Forget Password.</p>
+                    </div>
+                </div>
+                <div id="contactUs" style="display: none;">
+                    <h2>CONTACT US</h2>
+                    <form action="/action_page.php">
+                        <div class="input-wrapper">
+                            <input type="text" id="contactInput">
+                            <button type="submit" class="icon-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                                  <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                
+                
+                               
+            
+
+            <!--<div class="dropdown-menu">
+                <a href="#">HOMEPAGE</a>
+                <a href="#">ACCOUNT</a>
+                <a href="#">HISTORY</a>
+                <a href="#">FAQ</a>
+                <a href="#">CONTACT US</a>
+                <a href="#">LOG OUT</a>
+            </div>-->      
+        </div>
+    </header>
+
+    <div class="background-image" id="bgImage">
+        <div id="buttons-container"></div>
+        <!-- Empty div to hold the background image --> 
+        <!-- Example buttons with different initial positions -->
+        <!--<button id="R21" class="map-button"></button>
+        <button id="R22" class="map-button"></button>
+        <button id="R23" class="map-button"></button>
+        <button id="R24" class="map-button"></button>
+        <button id="R25" class="map-button"></button>
+        <button id="R26" class="map-button"></button>
+        <button id="R27" class="map-button"></button>
+        <button id="R28" class="map-button"></button>
+
+
+        <button id="BR01" class="map-button"></button>
+        <button id="BR02" class="map-button"></button>
+        <button id="BR03" class="map-button"></button>
+        <button id="BR04" class="map-button"></button>
+        <button id="BR05" class="map-button"></button>
+        <button id="BR06" class="map-button"></button>
+        <button id="BR07" class="map-button"></button>
+        <button id="BR08" class="map-button"></button>
+        <button id="BR09" class="map-button"></button>
+        <button id="BR10" class="map-button"></button>
+        <button id="BR11" class="map-button"></button>
+
+        <button id="BR13" class="map-button"></button>-->
+
+        
+        <!-- Add more buttons as needed -->
+
+    </div>
+    <!-- Main content goes here -->
+
+    <script src="../static/homepage.js"></script>
+    
+</body>
+</html>

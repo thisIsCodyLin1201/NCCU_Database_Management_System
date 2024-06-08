@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Belgrano&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption&display=swap" rel="stylesheet" />
+        <link href="../css/macmain.css" rel="stylesheet" />
+        <title>Document</title>
+        </head>
+    <body>
+        <div class="camera_forget"></div>
+        <div class="locker_forget"></div>
+        <div class="mrt_forget"> </div>
+        <button onclick =  "window.location.href = 'http://127.0.0.1:5501/src/main/resources/templates/LoginPage.html'" 
+                        type = "button" class="back_forget" aria-label="Close" style="background-color: transparent;">
+                        &lt;Back
+        </button>
+        <span class="forgetpass_forget" >
+            FORGET PASSWORD
+        </span>
+        <span class="email_forget" id="emailLabel">
+            E-mail
+        </span>
+        <input type="email" class="input_forget" id="emailInput" oninput="handleEmailInput()">
+        <button onclick=verifyEmail(); window.location.href = 'http://127.0.0.1:5501/src/main/resources/templates/LoginPage.html'" 
+                type="button" class="verify_forget" aria-label="Close" style="background-color: transparent;" >
+            Send Verification Mail
+        </button>   
+        <script src="../static/scripts.js">
+            if (!email) {
+                            alert('Please input your E-mail.');
+                            return;
+                        }
+        </script>
+          
+    </body>
+</html>

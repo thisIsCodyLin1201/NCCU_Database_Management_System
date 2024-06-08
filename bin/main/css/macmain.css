@@ -1,0 +1,1797 @@
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-black: #000;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #adb5bd;
+  --bs-gray-600: #6c757d;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #343a40;
+  --bs-gray-900: #212529;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-primary-rgb: 13, 110, 253;
+  --bs-secondary-rgb: 108, 117, 125;
+  --bs-success-rgb: 25, 135, 84;
+  --bs-info-rgb: 13, 202, 240;
+  --bs-warning-rgb: 255, 193, 7;
+  --bs-danger-rgb: 220, 53, 69;
+  --bs-light-rgb: 248, 249, 250;
+  --bs-dark-rgb: 33, 37, 41;
+  --bs-white-rgb: 255, 255, 255;
+  --bs-black-rgb: 0, 0, 0;
+  --bs-body-color-rgb: 33, 37, 41;
+  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #212529;
+  --bs-body-bg: #fff;
+  --bs-border-width: 1px;
+  --bs-border-style: solid;
+  --bs-border-color: #dee2e6;
+  --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+  --bs-border-radius: 0.375rem;
+  --bs-border-radius-sm: 0.25rem;
+  --bs-border-radius-lg: 0.5rem;
+  --bs-border-radius-xl: 1rem;
+  --bs-border-radius-2xl: 2rem;
+  --bs-border-radius-pill: 50rem;
+  --bs-link-color: #0d6efd;
+  --bs-link-hover-color: #0a58ca;
+  --bs-code-color: #d63384;
+  --bs-highlight-bg: #fff3cd;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  background-color: rgba(147,138,138,0.20000000298023224);
+  text-align: var(--bs-body-text-align);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-size: cover;
+}
+/*.v1_2 {
+  width: 100%;
+  height: 1117px;
+  background: rgba(147,138,138,0.20000000298023224);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}*/
+.camera_p1 {/*相機*/
+  width: 29%;
+  height: 60%;
+  background: url("../images/v3_2.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  position: absolute;
+  top: 40%;
+  right: 5%;
+  transform: translate(5%);
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.locker_p1 {/*櫃子*/
+  width: 29%;
+  height: 60%;
+  background: url("../images/v3_4.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.800000011920929;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+.mrt_p1 { /*捷運*/
+  width: 29%;
+  height: 60%;
+  background: url("../images/v3_8.png");
+  background-repeat: no-repeat;
+  background-position: center ;
+  background-size: cover;
+  opacity: 0.800000011920929;
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  transform: translateX(-5%);
+  overflow: hidden;
+}
+.btn_p1 {
+  width: 287px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 250px;
+  right: 5%;
+  transform: translateX(25%);
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 25px;
+  opacity: 1;
+  text-align: left;
+  border: none;
+}
+.btn_p1:hover {                      
+ 
+  color: var(--bs-gray-800);
+  border-radius: 20px;
+  opacity: 0.5;                             
+  }
+.text_p1 {
+  width: 100%;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 40px;
+  left: 46px;
+  font-family: PT Serif Caption;
+  font-weight: Regular;
+  font-size: 60px;
+  opacity: 0.699999988079071;
+  text-align: left;
+}
+
+.section-flex {
+  display: flex;
+  justify-content: center;
+}
+.section-block {
+  width: 50%;
+  height: 200px;
+
+  
+}
+/*Login page*/
+.Gray_p2 {/*灰色橢圓*/
+  width: 200%;
+  height: 300px;
+  background: rgba(217,217,217,0.699999988079071);
+  opacity: 1;
+  background-position: bottom;
+  position: absolute;
+  top: -15%;
+  left: -5%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.Mrt_p2{/*捷運*/
+  width: 29%;
+  height: 60%;
+  background: url("../images/v3_8.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.20000000298023224;
+  position: absolute;
+  top: 330px;
+  left: 5%;
+  transform: translateX(-5%);
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.Locker_p2 {/*櫃子*/
+  width: 29%;
+  height: 60%;
+  background: url("../images/v3_4.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.20000000298023224;
+  position: absolute;
+  top: 330px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.camera_p2 {/*相機*/
+  width: 29%;
+  height: 60%;
+  background: url("../images/v3_2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.20000000298023224;
+  position: absolute;
+  top: 330px;
+  right: 5%;
+  transform: translateX(5%);
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.Login1 {/*Login*/
+  width: 228px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  
+  top: 71.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: center ;
+  border: none;
+  z-index: 999; 
+}
+.Login1:hover {                      
+ 
+  color: var(--bs-gray-800);
+  border-radius: 20px;
+  opacity: 0.5;                             
+  
+}
+.deleteUser {/*deleteUser*/
+  width: 228px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  
+  top: 71.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: center ;
+  border: none;
+  z-index: 999; 
+}
+.deleteUser:hover {                      
+ 
+  color: var(--bs-gray-800);
+  border-radius: 20px;
+  opacity: 0.5;                             
+  
+}
+.Signup {
+  width: 228px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 81.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: center;
+  border: none;
+  z-index: 999; 
+}
+.Signup:hover {                      
+ 
+  color: var(--bs-gray-800);
+  border-radius: 20px;
+  opacity: 0.5;                             
+  }
+.Gray1 { /*小灰色橢圓*/
+  width: 550px;
+  height: 53px;
+  background: rgba(190,187,187,0.699999988079071);
+  opacity: 1;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+.Gray2 {
+  width: 550px;
+  height: 53px;
+  background: rgba(190,187,187,0.699999988079071);
+  opacity: 1;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+.LOGIN_p2 {
+  width: 292px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 210px;
+  left: 20%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 25px;
+  opacity: 1;
+  text-align: left;
+}
+.DELETE_ACCOUNT {
+  width: 292px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 250px;
+  left: 20%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 25px;
+  opacity: 1;
+  text-align: left;
+}
+.v4_68 {
+  width: 916px;
+  background: url("../images/v4_68.png");
+  opacity: 1;
+  position: absolute;
+  top: 557px;
+  left: 405px;
+  border: 1px solid rgba(60,54,54,1);
+  
+}
+.link-top {
+  width: 800px;
+  height: 40px;
+  position: absolute;
+  top: 330px;
+  left: 20%; /* 将直线的左侧边界放置在页面的中心 */
+  transform: translateX(20%);
+  transform: translateY(20%);
+  border-top: solid #090a0a 1px;
+  z-index: 999; 
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  padding-top: 5px;
+}
+.line {
+  width: 800px;
+  height: 40px;
+  position: absolute;
+  top: 430px;
+  position: absolute;
+  left: 20%;
+  transform: translateX(20%);
+  transform: translateY(15%);
+  border-top: solid #090a0a 1px;
+  z-index: 999; 
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  padding-top: 5px;
+}
+.Account {
+  width: 292px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 300px;
+  left: 20%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+
+.Password {
+  width: 292px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 400px;
+  left: 20%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+.Keep {
+  width: 292px;
+  color: rgba(60,54,54,1);
+  position: absolute;
+  top: 480px;
+  left: 20%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 15px;
+  opacity: 1;
+  text-align: left;
+}
+.Forget {
+  width: 357px;
+  color: rgba(60,54,54,1);
+  position: absolute;
+  top: 400px;
+  left: 730px;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 15px;
+  opacity: 1;
+  text-align: right;
+  border: none;
+  z-index: 999; 
+}
+.Forget:hover {                      
+ 
+  color: var(--bs-gray-800);
+  border-radius: 20px;
+  opacity: 0.5;                             
+  }
+
+.Change {
+  width: 357px;
+  color: rgba(60,54,54,1);
+  position: absolute;
+  top: 400px;
+  left: 560px;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 15px;
+  opacity: 1;
+  text-align: right;
+  border: none;
+  z-index: 999; 
+}
+.Change:hover {                      
+  
+  color: var(--bs-gray-800);
+  border-radius: 20px;
+  opacity: 0.5;                             
+}
+/*Signup page*/
+.back {
+  width: 292px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 200px;
+  left: 20%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+  border: none;
+  z-index: 999; 
+}
+.back:hover {                      
+ 
+  color: var(--bs-gray-800);
+  border-radius: 20px;
+  opacity: 0.5;                             
+  }
+.signup_p3 {
+  width: 350px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 280px;
+  left: 21.2%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+}
+.email{
+  width: 292px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 380px;
+  left: 23%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+.password{
+  width: 292px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 480px;
+  left: 23%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+.input1{
+  width: 800px;
+  height: 40px;
+  position: absolute;
+  top: 410px;
+  left: 23%; /* 将直线的左侧边界放置在页面的中心 */
+  transform: translateX(20%);
+  transform: translateY(20%);
+  border-top: solid #090a0a 1px;
+  z-index: 999; 
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  padding-top: 5px;
+}
+.input2{
+  width: 800px;
+  height: 40px;
+  position: absolute;
+  top: 510px;
+  left: 23%; /* 将直线的左侧边界放置在页面的中心 */
+  transform: translateX(20%);
+  transform: translateY(20%);
+  border-top: solid #090a0a 1px;
+  z-index: 999; 
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  padding-top: 5px;
+}
+.Gray_signup {/*灰色橢圓*/
+  width: 200%;
+  height: 300px;
+  background: rgba(217,217,217,0.699999988079071);
+  opacity: 1;
+  background-position: bottom;
+  position: absolute;
+  top: 80%;
+  left:-5%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.Mrt_signup{/*捷運*/
+  width: 29%;
+  height: 70%;
+  background: url("../images/v3_8.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.20000000298023224;
+  position: absolute;
+  top: 0%;
+  left: 5%;
+  transform: translate(-5%,0%);
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.Locker_signup {/*櫃子*/
+  width: 29%;
+  height: 70%;
+  background: url("../images/v3_4.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.20000000298023224;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%,0%);
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.camera_signup {/*相機*/
+  width: 29%;
+  height: 70%;
+  background: url("../images/v3_2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.20000000298023224;
+  position: absolute;
+  top: 0%;
+  right: 5%;
+  transform: translate(5%,0%);
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.login_p3{
+  width: 287px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 600px;
+  left: 780px;
+  transform: translateX(25%);
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 15px;
+  opacity: 1;
+  text-align: right;
+  border: none;
+}
+.login_p3:hover {                      
+ 
+  color: var(--bs-gray-800);
+  border-radius: 20px;
+  opacity: 0.5;                             
+  }
+/*Forget page*/
+.camera_forget{
+  width: 29%;
+  height: 60%;
+  background: url("../images/v3_2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.20000000298023224;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  
+  transform: translate(5%,-50%);
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.locker_forget{
+  width: 29%;
+  height: 60%;
+  background: url("../images/v3_4.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.20000000298023224;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.mrt_forget{
+  width: 29%;
+  height: 60%;
+  background: url("../images/v3_8.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.20000000298023224;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-5%,-50%);
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.forgetpass_forget {
+  width: 350px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 280px;
+  left: 21.2%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+}
+.back_forget{
+  width: 292px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 200px;
+  left: 20%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+  border: none;
+  z-index: 999; 
+}
+.back_forget:hover {                      
+  
+  color: var(--bs-gray-800);
+  border-radius: 20px;
+  opacity: 0.5;                             
+  }
+.email_forget{
+  width: 292px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 380px;
+  left: 23%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+.input_forget{
+  width: 800px;
+  height: 40px;
+  position: absolute;
+  top: 51%;
+  left: 23%; /* 将直线的左侧边界放置在页面的中心 */
+  transform: translateX(20%,20%);
+  border-top: solid #090a0a 1px;
+  z-index: 999; 
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  padding-top: 5px;
+}
+.verify_forget{
+  width: 287px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 60%;
+  left: 780px;
+  transform: translateX(25%);
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: right;
+  border: none;
+}
+.verify_forget:hover {                      
+  
+  color: var(--bs-gray-800);
+  border-radius: 20px;
+  opacity: 0.5;                             
+  }
+/*ChangePassword page*/
+.camera_change{
+  width: 29%;
+  height: 60%;
+  background: url("../images/v3_2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.20000000298023224;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  
+  transform: translate(5%,-50%);
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.locker_change{
+  width: 29%;
+  height: 60%;
+  background: url("../images/v3_4.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.20000000298023224;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.mrt_change{
+  width: 29%;
+  height: 60%;
+  background: url("../images/v3_8.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.20000000298023224;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-5%,-50%);
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.back_change{
+  width: 292px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 200px;
+  left: 20%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+  border: none;
+  z-index: 999;
+}
+.back_change:hover {                      
+  
+  color: var(--bs-gray-800);
+  border-radius: 20px;
+  opacity: 0.5;                             
+}
+
+.current_change {
+  width: 350px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 250px; /* 调整标题位置 */
+  left: 21.2%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+}
+
+.email_change {
+  width: 292px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 41%; /* 新增电子邮件标签位置 */
+  left: 23%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+
+.input_email_change {
+  width: 800px;
+  height: 40px;
+  position: absolute;
+  top: 44%;
+  left: 23%; /* 将直线的左侧边界放置在页面的中心 */
+  transform: translateX(20%);
+  transform: translateY(20%);
+  border-top: solid #090a0a 1px;
+  z-index: 999; 
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  padding-top: 5px;
+}
+
+.currentpass_change {
+  width: 292px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 52%; /* 调整当前密码标签位置 */
+  left: 23%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+
+.input1_change{
+  width: 800px;
+  height: 40px;
+  position: absolute;
+  top: 55%;
+  left: 23%; /* 将直线的左侧边界放置在页面的中心 */
+  transform: translateX(20%);
+  transform: translateY(20%);
+  border-top: solid #090a0a 1px;
+  z-index: 999; 
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  padding-top: 5px;
+}
+.input2_change{
+  width: 800px;
+  height: 40px;
+  position: absolute;
+  top: 66%;
+  left: 23%; /* 将直线的左侧边界放置在页面的中心 */
+  transform: translateX(20%);
+  transform: translateY(20%);
+  border-top: solid #090a0a 1px;
+  z-index: 999; 
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  padding-top: 5px;
+}
+.newpass_change {
+  width: 292px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 63%; /* 调整新密码标签位置 */
+  left: 23%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+
+
+.login_change{
+  width: 287px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 75%;
+  left: 54%;
+  transform: translateX(25%);
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: right;
+  border: none;
+}
+.login_change:hover {                      
+ 
+  color: var(--bs-gray-800);
+  border-radius: 20px;
+  opacity: 0.5;                             
+  }
+.forget_change {
+  width: 357px;
+  color: rgba(60,54,54,1);
+  position: absolute;
+  top: 64%;
+  left: 54%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 15px;
+  opacity: 1;
+  text-align: right;
+  border: none;
+  z-index: 999; 
+}
+.forget_change:hover {                      
+ 
+  color: var(--bs-gray-800);
+  border-radius: 20px;
+  opacity: 0.5;                             
+  }
+
+
+/*StationInfo Page*/
+.back1_station {
+  width: 100%;
+  height: 100%;
+  background: rgba(152,136,125,0.6000000238418579);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.back2_station {
+  width: 100%;
+  height: 40%;
+  background: rgba(97,108,122,0.3);
+  opacity: 1;
+  position: absolute;
+  top: 80%;
+  left: 0px;
+  overflow: hidden;
+}
+
+.back_station{
+  width: 292px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+  border: none;
+  z-index: 999;
+}
+.back_station:hover {                      
+  
+  color: var(--bs-gray-800);
+  border-radius: 20px;
+  opacity: 0.5;                             
+}
+.station_station {
+  width: 80%;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 10%;
+  left: 8%;
+  font-family: Belgrano;
+  font-weight: Regular;
+  font-size: 40px;
+  opacity: 1;
+  text-align: left;
+}
+.navbar-nav {
+  text-align: right; /* 将菜单项靠右对齐 */
+  
+ 
+}
+.nav-item {
+  display: inline-block;
+  margin-right: 2%; /* 调整菜单项之间的间距 */
+}
+
+.listbtn {
+  color: black;
+  text-decoration: none;
+  font-size: 150%; /* 调整字体大小 */
+  cursor: pointer !important;/* 改變游標圖案*/
+  line-height: 5;
+  font-family: Belgrano;
+  z-index:999;
+}
+.listbtn:hover {
+  color: var(--bs-gray); 
+}
+.main-menu { 
+  color: black;
+  background-color: rgba(97,108,122,0);
+  padding:10px; 
+  font-size: 120%;
+  position:absolute;
+  top: 86%;
+  right:3%;
+  font-family: Belgrano;
+  cursor:pointer; 
+  display:inline-block;
+  z-index: 999;
+  user-select: none;
+  font-size: 150%; 
+  
+ } /* 主選單的樣式 */
+.main-menu:hover {
+  color: var(--bs-gray); 
+  }
+.sub-menu {
+  display:none;
+   color: black;
+   background-color:#CCCCCC; 
+   margin:5px -5px; 
+   padding:10px; 
+   list-style-type:none; 
+   position:absolute; 
+   bottom: 100%; 
+   font-size: 100%; 
+   width: 200%;
+   right: 0; /* 将下拉菜单向右对齐 */
+   
+  } /* 下拉清單的樣式 */
+.sub-menu li { 
+  
+  padding: 8px 5px;
+  text-align:right; 
+  } /* 下拉清單每一列的樣式 */
+.sub-menu li:hover { 
+  color:black;
+  background-color:rgba(210, 206, 206, 1);
+  }
+.sub-menu a{
+   text-align:right;
+   display:block;
+   text-decoration:none; 
+   color: black;
+  }
+.sub-menu  a:hover {
+   color:black;
+   background-color:rgba(210, 206, 206, 1);
+   text-decoration:none;
+  }
+
+
+  /* DepositPage*/
+  .back1_deposit {
+    width: 100%;
+    height: 100%;
+    background: rgba(152, 136, 125, 0.6);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+  .back2_deposit {
+    width: 100%;
+    height: 40%;
+    background: rgba(97,108,122,0.3);
+    opacity: 1;
+    position: absolute;
+    top: 80%;
+    left: 0px;
+    overflow: hidden;
+  }
+  .back_deposit{
+    width: 292px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-family: Belgrano;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+    border: none;
+    z-index: 999;
+  }
+  .back_deposit:hover {                      
+    color: var(--bs-gray-800);
+    border-radius: 20px;
+    opacity: 0.5;                             
+  }
+  .confirm_deposit{
+    width: 292px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-family: Belgrano;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: right;
+    border: none;
+    z-index: 999;
+  }
+  .confirm_deposit:hover {                      
+    color: var(--bs-gray-800);
+    border-radius: 20px;
+    opacity: 0.5;                             
+  }
+  .date{
+    width: 292px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    font-family: Belgrano;
+    font-weight: Regular;
+    font-size: 15px;
+    opacity: 1;
+    text-align: left;
+    border: none;
+    z-index: 999;
+  }
+  .date:hover {                      
+    color: var(--bs-gray-800);
+    border-radius: 20px;
+    opacity: 0.5;                             
+  }
+  .choose_date{
+    color: rgba(0,0,0,1);
+    position: absolute;
+    width: 305px;
+    height: 4%;
+    padding: 8px;
+    top: 25%;
+    right: 15%;
+    font-family: Belgrano;
+    font-weight: Regular;
+    font-size: 15px;
+    opacity: 1;
+    text-align: left;
+    z-index: 999;
+    background-color: transparent; /* 將背景顏色設置為透明 */
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  .airdatepicker {
+    z-index: 99; /* 或者其他更高的值，根據你的需要調整 */
+}
+
+  .listmenu{
+    width: 500px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    font-family: Belgrano;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+    border: none;
+    z-index: 999;
+    background-color:transparent;
+    line-height: 3.5; 
+  }
+  .btn-group-vertical{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 200px; /* 距離頂部的距離 */
+    right: 5%; /* 距離左側的距離 */
+   
+  }
+  .btn-group-vertical .btn {
+    margin-bottom: 100px; /* 按鈕與按鈕之間的距離 */
+    width: 150%; /* 按鈕的寬度 */
+    height: auto; /* 按鈕的高度 */
+    font-size: 30px;
+    background-color:transparent;
+    opacity: 1;
+    color: var(--bs-gray-800);
+    border: none; /* 移除邊框 */
+    border-radius: 0; /* 移除圓角 */
+    outline: none; /* 移除外框線 */
+    padding: 0; /* 移除內邊距 */
+}
+.btn-group-vertical .btn:hover {                      
+  color: var(--bs-gray-800);
+  border-radius: 20px;
+  opacity: 0.5;                             
+}     
+.amountDelivery select {
+  background: rgba(255, 255, 255, 0); 
+  color:  rgba(0,0,0,1);
+  margin: 15px;
+  width: 305px;
+  height: 4%;
+  padding: 8px;
+  position: absolute;
+  top:45%; 
+  right:14%;
+  font-size: 15px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), linear-gradient(#003d79, #003d79);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), -webkit-linear-gradient(transparent, transparent);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), -moz-linear-gradient(#003d79, #003d79);
+  background-position: right 0.5em top 50%, 0 0;
+  background-size: contain, cover;
+  background-repeat: no-repeat, repeat;
+}
+.amountDeposit select {
+  background: rgba(255, 255, 255, 0); 
+  color:  rgba(0,0,0,1);
+  margin: 15px;
+  width: 305px;
+  height: 4%;
+  padding: 8px;
+  position: absolute;
+  top:60%; 
+  right:14%;
+  font-size: 15px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), linear-gradient(#003d79, #003d79);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), -webkit-linear-gradient(transparent, transparent);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), -moz-linear-gradient(#003d79, #003d79);
+  background-position: right 0.5em top 50%, 0 0;
+  background-size: contain, cover;
+  background-repeat: no-repeat, repeat;
+}
+
+option {
+  appearance: none;
+  background: #fff;
+  position: absolute;
+} 
+.start-time select {
+  background: rgba(255, 255, 255, 0); 
+  color:  rgba(0,0,0,1);
+  margin: 15px;
+  width: 305px;
+  height: 4%;
+  padding: 8px;
+  position: absolute;
+  top: 35%;
+  right:14%;
+  font-size: 15px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), linear-gradient(#003d79, #003d79);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), -webkit-linear-gradient(transparent, transparent);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), -moz-linear-gradient(#003d79, #003d79);
+  background-position: right 0.5em top 50%, 0 0;
+  background-size: contain, cover;
+  background-repeat: no-repeat, repeat;
+}
+
+.select {
+  background: rgba(255, 255, 255, 0); 
+  color:  rgba(0,0,0,1);
+  margin: 15px;
+  width: 305px;
+  height: 4%;
+  padding: 8px;
+  position: absolute;
+  top: 35%;
+  right:14%;
+  font-size: 15px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), linear-gradient(#003d79, #003d79);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), -webkit-linear-gradient(transparent, transparent);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), -moz-linear-gradient(#003d79, #003d79);
+  background-position: right 0.5em top 50%, 0 0;
+  background-size: contain, cover;
+  background-repeat: no-repeat, repeat;
+}
+.End-time select {
+  background: rgba(255, 255, 255, 0); 
+  color:  rgba(0,0,0,1);
+  margin: 15px;
+  width: 305px;
+  height: 4%;
+  padding: 8px;
+  position: absolute;
+  top:47.5%;
+  right:14%;
+  font-size: 15px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), linear-gradient(#003d79, #003d79);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), -webkit-linear-gradient(transparent, transparent);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), -moz-linear-gradient(#003d79, #003d79);
+  background-position: right 0.5em top 50%, 0 0;
+  background-size: contain, cover;
+  background-repeat: no-repeat, repeat;
+}
+
+
+.option {
+  width: 300px;
+  height: 40px;
+  position: absolute;
+  top:60%;
+  right: 15.5%; 
+  transform: translateX(20%);
+  transform: translateY(20%);
+  border-top: solid #090a0a 1px;
+  z-index: 999; 
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  padding-top: 5px;
+}
+.optionDeposit {
+  width: 300px;
+  height: 40px;
+  position: absolute;
+  top:71.5%;
+  right: 15.5%; 
+  transform: translateX(20%);
+  transform: translateY(20%);
+  border-top: solid #090a0a 1px;
+  z-index: 999; 
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  padding-top: 5px;
+}
+.k-w-300{
+  position: absolute;
+  top: 35%;
+  margin: 15px;
+  width: 22.5%;
+  height: 6%;
+  padding: 8px;
+  left:62%;
+  z-index: 999;
+}
+.k-w-301{
+  position: absolute;
+  margin: 15px;
+  width: 22.5%;
+  height: 6%;
+  padding: 8px;
+  position: absolute;
+  top:47.5%;
+  left:62%;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0); 
+}
+
+.air-datepicker.-bottom-left-.-from-bottom-.-active- {
+  z-index: 999;
+}
+
+.hotel Select{
+    background: rgba(255, 255, 255, 0); 
+    color:  rgba(0,0,0,1);
+    margin: 15px;
+    width: 305px;
+    height: 4%;
+    padding: 8px;
+    position: absolute;
+    top:33%;
+    right:14%;
+    font-size: 15px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), linear-gradient(#003d79, #003d79);
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), -webkit-linear-gradient(transparent, transparent);
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), -moz-linear-gradient(#003d79, #003d79);
+    background-position: right 0.5em top 50%, 0 0;
+    background-size: contain, cover;
+    background-repeat: no-repeat, repeat;
+  
+}
+
+
+#reservationInfo, #hotelInfo {
+  font-size: 35px;
+}
+#reservationDetails, #hotelDetails{
+  margin-top: 37px; /* Add margin for separation */
+  font-size: 20px;
+  line-height: 1.75;
+}
+
+#searchBlock.open, #reservationInfo.open, #hotelInfo.open, #more.open, .dropdown-menu.open {
+  display: block;
+}
+
+#searchInput {
+  color: black;
+  border-radius: 25px;
+  height: 46px; /* Increase height */
+  width: 40%;
+  padding: 10px 20px; /* Adjust padding */
+  font-size: 18px; /* Font size for search block */
+  box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.8); /* Shadow */
+  background-color: rgba(255, 255, 255, 0.85)
+  
+}
+
+
+#searchDetails {
+  display: none; /* Hidden until a station is selected */
+}
+
+
+
+#searchDropdown {
+  background-color: black;
+  color: white; /* Set text color to white */
+  padding: 10px; /* Add padding for better appearance */
+}
+
+/* Hidden by default */
+#searchBlock, #reservationInfo, #hotelInfo, #more, .dropdown-menu {
+  display: none;
+  background-color: #616C7A;
+  padding: 20px 30px;
+  /*border: 1px solid #FFFFFF;*/
+  position: absolute;
+  top:30%;
+
+  left: 0%;
+  width: 100%;
+  z-index: 999;
+  height: 50%; /* Increased height */
+  overflow-y: auto; /* Added to enable scrolling if content exceeds height */
+  color: white; /* Set text color to white */
+}
+
+.bi-chevron-up {
+  margin-left: 2px;
+}
+#linkContainer {
+  position: fixed;
+  top:30%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  padding: 60px 20px 20px;
+  background-color: #D9D9D9;
+  overflow-y: auto;
+  z-index: 999; /* Ensure it appears above other content */
+  text-decoration: none;
+  color: black;
+  
+}
+#accountLink, #historyLink, #faqLink, #contactLink, #logoutLink, #deleteAccount {
+  padding-left: 1200px;
+  text-decoration: none;
+  color: black;
+  line-height: 50px;
+  z-index: 999;;
+  font-family: Belgrano;
+  font-size: 25px;
+}
+
+/*#logoutLink {
+    line-height: 138px;
+}
+*/
+
+.bi-box-arrow-right {
+  margin-left: 10px;
+}
+
+
+#account, #faqContainer, #contactUs, #history {
+  position: fixed;
+  top: 30%;
+  left: 0;
+  width: 77%;
+  height: 50%;
+  background-color: rgba(125, 122, 119, 0.5);
+  padding: 20px 50px;
+  overflow-y: auto;
+  z-index: 1002; /* Slightly lower than linkContainer to allow overlap */
+  line-height: 2;
+  font-family: Belgrano;
+  font-size:22px;
+  
+}
+
+.label {
+  margin-bottom: 10px; /* Adds space below each label */
+}
+
+.detail {
+  font-size: 20px;
+  margin-bottom: 20px; /* Adds more space below each detail to separate from the next label */
+  border-bottom: 1px solid black; /* Optional: adds a line below the detail */
+  padding-bottom: 2px; /* Optional: adds padding above the border line */
+  font-family: Belgrano;
+}
+
+
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  font-family: Belgrano;
+}
+
+.faq-answer {
+  font-size: 22px;
+  padding-left: 50px;
+  display: none;
+  font-family: Belgrano;
+}
+
+/* Optional: Increase the spacing if needed */
+.bi-chevron-down {
+  margin-left: auto;
+}
+
+
+.rotated {
+  transform: rotate(180deg); /* Rotate the chevron by 180 degrees */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+
+#contactInput {
+  position: absolute;
+  top: 70%;
+  width: 1050px;
+  height: 50px;
+  padding: 1px 25px;
+  border-radius: 35px;
+  padding-right: 40px; /* Make space for the icon */
+}
+
+.input-wrapper {
+  position: absolute;
+  top: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.icon-btn {
+  position: absolute;
+  left:1070px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  top:17px;
+}
+
+.historyTitle {
+  cursor: pointer;
+  font-family: Belgrano;
+}
+
+.historyDetail {
+  display: none; /* Hidden by default */
+  font-family: Belgrano;
+}
+
+.historyDetail.open {
+  display: block; /* Shown when activated */
+}
+
+
+.showlockers {
+  position:absolute;
+  width: 90%; /* 设置框的宽度 */
+  height: 60%; /* 设置框的高度 */
+  left:5%;
+  top:20%;
+ 
+  padding: 10px; /* 设置框内边距 */
+  overflow: hidden; /* 隐藏溢出的文本 */
+  white-space: normal; /* 防止文本换行 */
+  text-overflow: ellipsis; /* 溢出部分显示省略号 */
+ 
+}
+
+.lockersDetail{
+display: none;
+position: absolute;
+width: 90%; /* 设置框的宽度 */
+height: 60%; /* 设置框的高度 */
+left: 5%;
+top: 20%;
+
+padding: 10px; /* 设置框内边距 */
+overflow: hidden; /* 隐藏溢出的文本 */
+white-space: normal; /* 允许文本换行 */
+text-overflow: ellipsis; /* 如果文本溢出，显示省略号 */
+font-size: 30px;
+}
+.size{
+font-family: Belgrano;
+font-weight: Regular;
+position:absolute;
+left:5%;
+
+}
+.availability{
+font-family: Belgrano;
+font-weight: Regular;
+position:relative;
+left:45%;
+
+}
+.lockerName{
+font-family: Belgrano;
+font-weight: Regular;
+position:absolute;
+top:0%;
+
+}
+.lockerSize{
+font-family: Belgrano;
+font-weight: Regular;
+position:absolute;
+top:0%;
+
+}
+.exit-name {
+display: block; /* 确保每个按钮都在新的一行 */
+margin: 5px 0; /* 添加一点间隔 */
+font-family: Belgrano;
+font-weight: Regular;
+border: none; /* 移除边框 */
+color: black; /* 文字颜色 */
+font-size: 20px; /* 字体大小 */
+cursor: pointer; /* 鼠标悬停时显示手型光标 */
+background-color: transparent; 
+}
+.lockers2 {
+font-family: Belgrano;
+font-weight: Regular;
+border: none; /* 移除边框 */
+color: black; /* 文字颜色 */
+font-size: 20px; /* 字体大小 */
+cursor: pointer; /* 鼠标悬停时显示手型光标 */
+background-color: transparent; 
+}
+.lockers3 {
+font-family: Belgrano;
+font-weight: Regular;
+border: none; /* 移除边框 */
+color: black; /* 文字颜色 */
+font-size: 20px; /* 字体大小 */
+cursor: pointer; /* 鼠标悬停时显示手型光标 */
+background-color: transparent; 
+}
+.others{
+font-family: Belgrano;
+font-weight: Regular;
+font-size: 20px; 
+background-color: transparent; 
+border: none; 
+}
+.exit-name{
+font-family: Belgrano;
+font-weight: Regular;
+font-size: 25px;
+}
+
+.lockersDetail2{
+display: none;
+position: absolute;
+width: 90%; /* 设置框的宽度 */
+height: 60%; /* 设置框的高度 */
+left: 5%;
+top: 20%;
+
+padding: 10px; /* 设置框内边距 */
+overflow: hidden; /* 隐藏溢出的文本 */
+white-space: normal; /* 允许文本换行 */
+text-overflow: ellipsis; /* 如果文本溢出，显示省略号 */
+font-size: 30px;
+}
+.lockersAvail{
+display: none;
+position: absolute;
+width: 90%; /* 设置框的宽度 */
+height: 60%; /* 设置框的高度 */
+left: 5%;
+top: 20%;
+
+padding: 10px; /* 设置框内边距 */
+overflow: hidden; /* 隐藏溢出的文本 */
+white-space: normal; /* 允许文本换行 */
+text-overflow: ellipsis; /* 如果文本溢出，显示省略号 */
+font-size: 30px;
+}
+#title{
+font-family: Belgrano;
+font-weight: Regular;
+font-size: 30px;
+position:absolute;
+top:15%;
+left:8%
+}

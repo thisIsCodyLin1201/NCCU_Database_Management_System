@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Belgrano&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption&display=swap" rel="stylesheet" />
+    <link href="../css/macmain.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-<IntegrityCode>" crossorigin="anonymous" />
+    <title>Taipei MRT Locker Service System</title>
+</head>
+<body>
+    <div class="camera_signup"></div>
+    <div class="Locker_signup"></div>
+    <div class="Mrt_signup"> </div>
+    <div class="Gray_signup"></div>
+    <button onclick="window.location.href = 'http://127.0.0.1:5501/src/main/resources/templates/LoginPage.html'" 
+            type="button" class="back" style="background-color: transparent;">
+        <i class="fas fa-chevron-left"></i>Back
+    </button>
+    <span class="signup_p3">
+        SIGN UP
+    </span>
+    <span class="email">
+        E-mail
+    </span>
+    <span class="password">
+        Password
+    </span>
+    <input type="email" class="input1" id="emailinput">
+    <input type="password" class="input2" id="passinput">               
+    <button id="sign" type="button" class="login_p3" style="background-color: transparent;">SIGN UP</button>  
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('sign').addEventListener('click', function(event) {
+                const email = document.getElementById('emailinput').value;
+                const password = document.getElementById('passinput').value;
+                console.log("test");
+
+                if (!email || !password) {
+                            alert('Please type E-mail and password.');
+                            return;
+                        }
+
+                fetch('http://localhost:8080/api/user/signUp', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email: email, password: password })
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Success:', data);
+                    window.location.href = 'LoginPage.html'; // 導向至登入頁面 
+                })
+                .catch((error) => {
+                    alert('This E-mail has been used.');
+                    console.error('Error:', error);
+                });
+            });
+        });
+    </script>
+    <script src="../static/scripts.js"></script>
+</body>
+</html>

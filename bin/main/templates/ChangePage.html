@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Belgrano&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption&display=swap" rel="stylesheet" />
+    <link href="../css/macmain.css" rel="stylesheet" />
+    <title>Taipei MRT Locker Service System</title>
+</head>
+<body>
+    <div class="camera_change"></div>
+    <div class="locker_change"></div>
+    <div class="mrt_change"> </div>
+    <button onclick="window.location.href='http://127.0.0.1:5501/src/main/resources/templates/LoginPage.html'" 
+                        type = "button" class="back_change" aria-label="Close"style="background-color: transparent;" >
+                        &lt;Back
+    </button>
+    <span class="current_change">CHANGE PASSWORD</span>
+    <form id="changePasswordForm"></form>
+        <span class="email_change">Email</span>
+        <input type = "text" name="email" class="input_email_change"> <!-- 新增的电子邮件输入框 --> 
+        
+        <span class="currentpass_change">Current Password</span>
+        <input type = "password" name="currentPassword" class="input1_change">
+        
+        <span class="newpass_change">New Password</span>
+        <input type = "password" name="newPassword" class="input2_change">
+
+        <button onclick="submitChangePassword()" 
+                type="button" class="login_change" aria-label="Close" style="background-color: transparent;">
+            Confirm
+        </button>
+    </form>      
+    <button onclick =  "window.location.href = 'http://127.0.0.1:5501/src/main/resources/templates/ForgetPage.html'" 
+                        type = "button" class="forget_change" aria-label="Close" style="background-color: transparent;">
+                    Forget Password
+    </button>
+    <script>
+        function submitChangePassword() {
+            let formData = new FormData();
+            formData.append('email', document.querySelector('.input_email_change').value);
+            formData.append('currentPassword', document.querySelector('.input1_change').value);
+            formData.append('newPassword', document.querySelector('.input2_change').value);
+            fetch('http://localhost:8080/api/user/changePassword', {
+                method: 'POST',
+                body: new URLSearchParams(formData),
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    throw new Error('Something went wrong');
+                }
+            })
+            .then(data => {
+                alert('Password changed successfully');
+                window.location.href = 'http://127.0.0.1:5501/src/main/resources/templates/LoginPage.html'
+            })
+            .catch(error => alert('Error changing password: ' + error));
+        }
+    </script>
+    <script src="../static/scripts.js"></script>
+</body>
+</html>

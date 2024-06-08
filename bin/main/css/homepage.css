@@ -1,0 +1,979 @@
+/* Your CSS styles here */
+body {
+    margin: 0;
+    font-family: Belgrano;
+    font-weight: regular;
+    font-size: 25px;
+}
+
+/*之後用這個*/
+/*
+.map-button {
+    background-color: #cccccc;
+    
+    border: none;
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.6;
+    
+}
+*/
+/*這個是測試位置*/
+
+.map-button {
+    background-color: #cccccc;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.8;
+    color: black;
+    font-size: 14px;
+    text-align: center; 
+    opacity: 0;
+}
+
+.map-container {
+    overflow: visible; /* or auto if you want scrollbars */
+}
+
+/*紅線-----------------------------*/
+/*
+#R01 {
+    padding: 15px 20px;
+    left: 100px;
+    top: 50px;
+}
+#R02 {
+    padding: 20px 25px;
+    left: 150px;
+    top: 100px;
+}
+#R03 {
+    padding: 25px 30px;
+    left: 200px;
+    top: 150px;
+}
+#R04 {
+    padding: 18px 22px;
+    left: 170px;
+    top: 200px;
+}
+#R05 {
+    padding: 22px 27px;
+    left: 120px;
+    top: 250px;
+}
+#R06 {
+    padding: 17px 21px;
+    left: 180px;
+    top: 300px;
+}
+#R07 {
+    padding: 23px 28px;
+    left: 130px;
+    top: 350px;
+}
+#R08 {
+    padding: 19px 24px;
+    left: 190px;
+    top: 400px;
+}
+#R09 {
+    padding: 24px 29px;
+    left: 140px;
+    top: 450px;
+}
+#R10 {
+    padding: 20px 25px;
+    left: 200px;
+    top: 500px;
+}
+#R11 {
+    padding: 25px 30px;
+    left: 150px;
+    top: 550px;
+}
+#R12 {
+    padding: 21px 26px;
+    left: 210px;
+    top: 600px;
+}
+#R13 {
+    padding: 26px 31px;
+    left: 160px;
+    top: 650px;
+}
+#R14 {
+    padding: 22px 27px;
+    left: 220px;
+    top: 700px;
+}
+#R15 {
+    padding: 27px 32px;
+    left: 170px;
+    top: 750px;
+}
+#R16 {
+    padding: 23px 28px;
+    left: 230px;
+    top: 800px;
+}
+#R17 {
+    padding: 28px 33px;
+    left: 180px;
+    top: 850px;
+}
+#R18 {
+    padding: 24px 29px;
+    left: 240px;
+    top: 900px;
+}
+#R19 {
+    padding: 29px 34px;
+    left: 190px;
+    top: 950px;
+}
+#R20 {
+    padding: 25px 30px;
+    left: 250px;
+    top: 1000px;
+}
+#R21 {
+    padding: 30px 35px;
+    left: 200px;
+    top: 1050px;
+}
+#R22 {
+    padding: 26px 31px;
+    left: 260px;
+    top: 1100px;
+}
+#R23 {
+    padding: 31px 36px;
+    left: 210px;
+    top: 1150px;
+}
+#R24 {
+    padding: 27px 32px;
+    left: 270px;
+    top: 1200px;
+}
+#R26 {
+    padding: 16px 33px;
+    left: 183px;
+    top: 402px;
+}
+#R27 {
+    padding: 18px 53px;
+    left: 145px;
+    top: 333px;
+}
+#R28 {
+    padding: 18px 32px;
+    left: 140px;
+    top: 272px;
+}
+*/
+/*棕線--------------------------------------*/
+/*
+#BR01 {
+    padding: 35px 28.5px;
+    left: 1150px;
+    top: 1550px;
+}
+#BR02 {
+    padding: 35px 18.9px;
+    left: 1019px;
+    top: 1560px;
+}
+#BR03 {
+    padding: 35px 50.8px;
+    left: 912.1px;
+    top: 1642px;
+}
+#BR04 {
+    padding: 17px 58.35px;
+    left: 680px;
+    top: 1643px;
+}
+#BR05 {
+    padding: 15px 32.5px;
+    left: 642px;
+    top: 1578px;
+}
+#BR06 {
+    padding: 17px 38px;
+    left: 635px;
+    top: 1517px;
+}
+#BR07 {
+    padding: 31px 26px;
+    left: 400px;
+    top: 1524.5px;
+}
+#BR08 {
+    padding: 20px 48.9px;
+    left: 281px;
+    top: 1470px;
+}
+#BR09 {
+    padding: 32px 39px;
+    left: 162.9px;
+    top: 1394px;
+}
+#BR10 {
+    padding: 35px 32px;
+    left: 96px;
+    top: 1274.7px;
+}
+#BR11 {
+    padding: 35px 32px;
+    left: 2px;
+    top: 1100px;
+}
+#BR12 {
+    padding: 35px 32px;
+    left: 96px;
+    top: 1274.7px;
+}
+#BR13 {
+    padding: 20px 65px;
+    left: 32px;
+    top: 1017px;
+}*/
+/* Random positioning and padding for BR14 to BR24 */
+/*
+#BR14 {
+    padding: 33px 37px;
+    left: 82px;
+    top: 1217px;
+}
+#BR15 {
+    padding: 34px 35px;
+    left: 65px;
+    top: 1150px;
+}
+#BR16 {
+    padding: 30px 40px;
+    left: 40px;
+    top: 1085px;
+}
+#BR17 {
+    padding: 31px 38px;
+    left: 78px;
+    top: 1020px;
+}
+#BR18 {
+    padding: 29px 41px;
+    left: 55px;
+    top: 965px;
+}
+#BR19 {
+    padding: 28px 42px;
+    left: 90px;
+    top: 905px;
+}
+#BR20 {
+    padding: 27px 43px;
+    left: 105px;
+    top: 850px;
+}
+#BR21 {
+    padding: 26px 44px;
+    left: 120px;
+    top: 790px;
+}
+#BR22 {
+    padding: 25px 45px;
+    left: 135px;
+    top: 730px;
+}
+#BR23 {
+    padding: 24px 46px;
+    left: 150px;
+    top: 670px;
+}
+#BR24 {
+    padding: 23px 47px;
+    left: 165px;
+    top: 610px;
+}
+*/
+/*藍線*/
+/* Random positioning and padding for BL01 to BL22 */
+/*
+#BL01 {
+    padding: 31px 33px;
+    left: 200px;
+    top: 1500px;
+}
+#BL02 {
+    padding: 30px 34px;
+    left: 220px;
+    top: 1450px;
+}
+#BL03 {
+    padding: 29px 35px;
+    left: 240px;
+    top: 1400px;
+}
+#BL04 {
+    padding: 28px 36px;
+    left: 260px;
+    top: 1350px;
+}
+#BL05 {
+    padding: 27px 37px;
+    left: 280px;
+    top: 1300px;
+}
+#BL06 {
+    padding: 26px 38px;
+    left: 300px;
+    top: 1250px;
+}
+#BL07 {
+    padding: 25px 39px;
+    left: 320px;
+    top: 1200px;
+}
+#BL08 {
+    padding: 24px 40px;
+    left: 340px;
+    top: 1150px;
+}
+#BL09 {
+    padding: 23px 41px;
+    left: 360px;
+    top: 1100px;
+}
+#BL10 {
+    padding: 22px 42px;
+    left: 380px;
+    top: 1050px;
+}*/
+#BL11 {
+    width: 100px;
+    height: 42px;
+    left: 460px;
+    top: 1323px;
+}
+#BL12 {
+    width: 65px;
+    height: 80px;
+    left: 492px;
+    top: 1270px;
+}
+#BL13 {
+    width: 36px;
+    height: 70px;
+    left: 501px;
+    top: 1303px;
+}
+#BL14 {
+    width: 90px;
+    height: 77px;
+    left: 520px;
+    top: 1266px;
+}
+#BL15 {
+    width: 70px;
+    height: 72px;
+    left: 549px;
+    top: 1265px;
+}
+#BL16 {
+    width: 38px;
+    height: 65px;
+    left: 560px;
+    top: 1300px;
+}
+#BL17 {
+    width: 55px;
+    height: 75px;
+    left: 579px;
+    top: 1266px;
+}
+#BL18 {
+    width: 42px;
+    height: 70px;
+    left: 595px;
+    top: 1303px;
+}/*
+#BL19 {
+    padding: 13px 51px;
+    left: 560px;
+    top: 600px;
+}
+#BL20 {
+    padding: 12px 52px;
+    left: 580px;
+    top: 550px;
+}
+#BL21 {
+    padding: 11px 53px;
+    left: 600px;
+    top: 500px;
+}
+#BL22 {
+    padding: 10px 54px;
+    left: 620px;
+    top: 450px;
+}
+*/
+/*綠線*/
+/* Random positioning and padding for G01 to G19 */
+/*
+#G01 {
+    padding: 34px 36px;
+    left: 700px;
+    top: 1400px;
+}
+#G02 {
+    padding: 33px 37px;
+    left: 720px;
+    top: 1350px;
+}
+#G03 {
+    padding: 32px 38px;
+    left: 740px;
+    top: 1300px;
+}
+#G04 {
+    padding: 31px 39px;
+    left: 760px;
+    top: 1250px;
+}
+#G05 {
+    padding: 30px 40px;
+    left: 780px;
+    top: 1200px;
+}
+#G06 {
+    padding: 29px 41px;
+    left: 800px;
+    top: 1150px;
+}
+#G07 {
+    padding: 28px 42px;
+    left: 820px;
+    top: 1100px;
+}
+#G08 {
+    padding: 27px 43px;
+    left: 840px;
+    top: 1050px;
+}
+#G09 {
+    padding: 26px 44px;
+    left: 860px;
+    top: 1000px;
+}
+#G10 {
+    padding: 25px 45px;
+    left: 880px;
+    top: 950px;
+}
+#G11 {
+    padding: 24px 46px;
+    left: 900px;
+    top: 900px;
+}
+#G12 {
+    padding: 23px 47px;
+    left: 920px;
+    top: 850px;
+}
+#G13 {
+    padding: 22px 48px;
+    left: 940px;
+    top: 800px;
+}
+#G14 {
+    padding: 21px 49px;
+    left: 960px;
+    top: 750px;
+}
+#G15 {
+    padding: 20px 50px;
+    left: 980px;
+    top: 700px;
+}
+#G16 {
+    padding: 19px 51px;
+    left: 1000px;
+    top: 650px;
+}
+#G17 {
+    padding: 18px 52px;
+    left: 1020px;
+    top: 600px;
+}
+#G18 {
+    padding: 17px 53px;
+    left: 1040px;
+    top: 550px;
+}
+#G19 {
+    padding: 16px 54px;
+    left: 1060px;
+    top: 500px;
+}
+*/
+/*橘線*/
+/* Random positioning and padding for O01 to O21 */
+/*
+#O01 {
+    padding: 35px 25px;
+    left: 500px;
+    top: 1500px;
+}
+#O02 {
+    padding: 34px 26px;
+    left: 520px;
+    top: 1450px;
+}
+#O03 {
+    padding: 33px 27px;
+    left: 540px;
+    top: 1400px;
+}
+#O04 {
+    padding: 32px 28px;
+    left: 560px;
+    top: 1350px;
+}
+#O05 {
+    padding: 31px 29px;
+    left: 580px;
+    top: 1300px;
+}
+#O06 {
+    padding: 30px 30px;
+    left: 600px;
+    top: 1250px;
+}
+#O07 {
+    padding: 29px 31px;
+    left: 620px;
+    top: 1200px;
+}
+#O08 {
+    padding: 28px 32px;
+    left: 640px;
+    top: 1150px;
+}
+#O09 {
+    padding: 27px 33px;
+    left: 660px;
+    top: 1100px;
+}
+#O10 {
+    padding: 26px 34px;
+    left: 680px;
+    top: 1050px;
+}
+#O11 {
+    padding: 25px 35px;
+    left: 700px;
+    top: 1000px;
+}
+#O12 {
+    padding: 24px 36px;
+    left: 720px;
+    top: 950px;
+}
+#O13 {
+    padding: 23px 37px;
+    left: 740px;
+    top: 900px;
+}
+#O14 {
+    padding: 22px 38px;
+    left: 760px;
+    top: 850px;
+}
+#O15 {
+    padding: 21px 39px;
+    left: 780px;
+    top: 800px;
+}
+#O16 {
+    padding: 20px 40px;
+    left: 800px;
+    top: 750px;
+}
+#O17 {
+    padding: 19px 41px;
+    left: 820px;
+    top: 700px;
+}
+#O18 {
+    padding: 18px 42px;
+    left: 840px;
+    top: 650px;
+}
+#O19 {
+    padding: 17px 43px;
+    left: 860px;
+    top: 600px;
+}
+#O20 {
+    padding: 16px 44px;
+    left: 880px;
+    top: 550px;
+}
+#O21 {
+    padding: 15px 45px;
+    left: 900px;
+    top: 500px;
+}*/
+
+/* Random positioning and padding for O50 to O54 */
+/*
+#O50 {
+    padding: 20px 50px;
+    left: 920px;
+    top: 450px;
+}
+#O51 {
+    padding: 19px 51px;
+    left: 940px;
+    top: 400px;
+}
+#O52 {
+    padding: 18px 52px;
+    left: 960px;
+    top: 350px;
+}
+#O53 {
+    padding: 17px 53px;
+    left: 980px;
+    top: 300px;
+}
+#O54 {
+    padding: 16px 54px;
+    left: 1000px;
+    top: 250px;
+}*/
+
+/*------------------------------------------------------------*/
+
+
+/*.map-button:hover {
+    background-color: #cccccc;
+    
+}*/
+
+.background-image {
+    /* Set background image */
+    background-image: url("../images/metro_map.png");
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    /*background-position: center; /* Center the background image */
+    position: relative;
+    height: 150vh;
+    z-index: 1;
+}
+
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px 30px 30px;
+    position: fixed;
+    /*top: 0;*/
+    top: 85%;
+    left: 0;
+    right: 0;
+    background-color: #D0D3D8;
+    z-index: 1000; /* Added z-index to keep it above other content */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05); /* Added shadow for depth */
+    height:10%;
+}
+
+.logo {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul li a:hover {
+    color: #666;
+}
+
+
+
+/* Hidden by default */
+#searchBlock, #reservationInfo, #hotelInfo, #more, .dropdown-menu {
+    display: none;
+    background-color: #616C7A;
+    padding: 20px 30px;
+    /*border: 1px solid #FFFFFF;*/
+    position: absolute;
+    bottom: calc(100%);
+    left: 0;
+    width: 97.3%;
+    z-index: 999;
+    height: 500px; /* Increased height */
+    overflow-y: auto; /* Added to enable scrolling if content exceeds height */
+    color: white; /* Set text color to white */
+}
+
+.bi-chevron-up {
+    margin-left: 2px;
+}
+#searchBlock {
+    
+    opacity: 0.8;
+}
+
+#searchBlock.open, #reservationInfo.open, #hotelInfo.open, #more.open, .dropdown-menu.open {
+    display: block;
+}
+
+#searchInput {
+    color: black;
+    border-radius: 25px;
+    height: 46px; /* Increase height */
+    width: 40%;
+    padding: 10px 20px; /* Adjust padding */
+    font-size: 18px; /* Font size for search block */
+    box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.8); /* Shadow */
+    background-color: rgba(255, 255, 255, 0.85)
+    
+}
+
+
+#searchDetails {
+    display: none; /* Hidden until a station is selected */
+}
+
+
+
+#searchDropdown {
+    background-color: black;
+    color: white; /* Set text color to white */
+    padding: 10px; /* Add padding for better appearance */
+}
+
+
+#reservationInfo, #hotelInfo {
+    font-size: 35px; /* Font size for reservation and hotel info */
+}
+
+#reservationDetails, #hotelDetails {
+    margin-top: 37px; /* Add margin for separation */
+    font-size: 20px;
+    line-height: 1.75;
+}
+
+#historyBlock {
+    position: absolute;
+    left: -250px; /* Adjust the position as needed */
+    width: 200px; /* Adjust the width as needed */
+    background-color: #616C7A;
+    padding: 20px;
+    z-index: 999; /* Ensure it's above other content */
+}
+
+
+#more a {
+    color: white; /* Set text color to white */
+    text-align: right; /* Align links to the left */
+    line-height: 2.5;
+    text-decoration: none;
+    right: 0;
+    left: 90%;
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    background-color: #616C7A;
+    min-width: 150px;
+    height: 310px;
+    z-index: 2; /* Set z-index higher than other blocks */
+    left: -100px; /* Adjusted position */
+}
+
+.dropdown-menu a {
+    color: white;
+    padding: 12px 13px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+}
+
+
+#linkContainer {
+    position: fixed;
+    bottom: 103px;
+    right: 0;
+    width: 97.3%;
+    height: 460.6px;
+    padding: 60px 20px 20px;
+    background-color: #D9D9D9;
+    overflow-y: auto;
+    z-index: 1001; /* Ensure it appears above other content */
+    text-decoration: none;
+    color: black;
+    
+}
+#accountLink, #historyLink, #faqLink, #contactLink, #logoutLink, #deleteAccount {
+    padding-left: 1260px;
+    text-decoration: none;
+    color: black;
+    line-height: 80px;
+}
+
+
+/*#logoutLink {
+    line-height: 138px;
+}
+*/
+
+.bi-box-arrow-right {
+    margin-left: 10px;
+}
+
+
+#account, #faqContainer, #contactUs, #history {
+    position: fixed;
+    bottom: 103px;
+    left: 0;
+    width: 77%;
+    height: 500px;
+    background-color: rgba(125, 122, 119, 0.5);
+    padding: 20px 50px;
+    overflow-y: auto;
+    z-index: 1002; /* Slightly lower than linkContainer to allow overlap */
+    line-height: 2;
+    
+}
+
+.label {
+    margin-bottom: 10px; /* Adds space below each label */
+}
+
+.detail {
+    font-size: 20px;
+    margin-bottom: 20px; /* Adds more space below each detail to separate from the next label */
+    border-bottom: 1px solid black; /* Optional: adds a line below the detail */
+    padding-bottom: 2px; /* Optional: adds padding above the border line */
+}
+
+
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.faq-answer {
+    font-size: 22px;
+    padding-left: 50px;
+    display: none;
+}
+
+/* Optional: Increase the spacing if needed */
+.bi-chevron-down {
+    margin-left: auto;
+}
+
+
+.rotated {
+    transform: rotate(180deg); /* Rotate the chevron by 180 degrees */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+
+#contactInput {
+    position: absolute;
+    top: 70%;
+    width: 1050px;
+    height: 50px;
+    padding: 1px 25px;
+    border-radius: 35px;
+    padding-right: 40px; /* Make space for the icon */
+}
+
+.input-wrapper {
+    position: absolute;
+    top: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.icon-btn {
+    position: absolute;
+    left:1070px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    top:17px;
+}
+
+.historyTitle {
+    cursor: pointer;
+}
+
+.historyDetail {
+    display: none; /* Hidden by default */
+}
+
+.historyDetail.open {
+    display: block; /* Shown when activated */
+}
+
+.backButton {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.bi-chevron-right{
+    margin-left: 15px;
+}

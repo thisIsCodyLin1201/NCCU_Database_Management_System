@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Belgrano&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-<IntegrityCode>" crossorigin="anonymous" />
+        <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Air datepicker Css -->
+        <link href="https://cdn.jsdelivr.net/npm/air-datepicker@3.3.5/air-datepicker.min.css" rel="stylesheet">
+        <link href="../css/macmain.css" rel="stylesheet" />
+        <!-- time range picker -->
+        <link rel="stylesheet" href="https://kendo.cdn.telerik.com/themes/7.2.1/default/default-ocean-blue.css">
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://kendo.cdn.telerik.com/2024.1.319/js/kendo.all.min.js"></script>
+        <script src="https://unpkg.com/jszip/dist/jszip.min.js"></script>
+        <title>Taipei MRT Locker Service System</title>
+    </head>
+    <body>
+        
+      <div class="back1_deposit"> 
+            <button onclick =  "window.location.href = 'http://127.0.0.1:5501/src/main/resources/templates/StationInfo.html'" 
+                        type = "button" class="back_deposit" aria-label="Close"style="background-color: transparent;" >
+                        <i class="fas fa-chevron-left"></i>Back
+            </button>
+            <button  id = "confirm" 
+                        type = "button" class="confirm_deposit" aria-label="Close"style="background-color: transparent;" >
+                        Confirm<i class="fas fa-chevron-right"></i>
+            </button>
+            <span id = "title">hi</span>
+            <ul class="listmenu">
+                <li class="list-group-item">Date</li>
+                <li class="list-group-item">Start Time</li>
+                <li class="list-group-item">End Time</li>
+                <li class="list-group-item">Amount</li>
+                <li class="list-group-item">Description(Optional)</li>
+              </ul>
+        <form id = "infoForm">
+            <input class="choose_date"id="myDatepicker" data-language='en' >
+        <br>
+        <br>
+            <div class="amountDeposit">
+                <select name="name" id="quantity">
+                  <option value="First value">1</option>
+                  <option value="Second value">2</option>
+                  <option value="Third value">3</option>
+                  <option value="Forth value">4</option>
+                  <option value="Fifth value">5</option>
+                </select>   
+            </div>
+            <input type = "text" class="optionDeposit" id = "textinput"> 
+            <div class="k-w-300">
+            <input id="start"  style="width: 100%;" />
+            </div>
+
+            <div class="k-w-301">
+             <input id="end" />
+            </div>
+            </form>
+            
+            
+            </div>
+        </form>
+       
+        <style>
+          
+        </style>
+        <div class="back2_station">
+          <ul class="navbar-nav" >
+              <li class="nav-item"><a class="listbtn" id = "searchLink" >SERACH</a></li>
+              <li class="nav-item"><a class="listbtn" id = "reservationLink">RESERVATION</a></li>
+              <li class="nav-item"><a class="listbtn" id = "hotelLink">DELIVER TO HOTEL</a></li>
+              <li class="nav-item"><a class="listbtn" id="moreLink">More<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
+                </svg></a>
+              </li>
+          </ul>
+        </div>
+      <div id="searchBlock" style="display: none;">
+          <div>
+              <select id="searchInput" placeholder="Search Station" list="stationNames" 84>
+              <optgroup label="Brown Line">
+                <option>BR01 Taipei Zoo</option>
+                <option>BR02 Muzha</option>
+                <option>BR03 Wanfang Community</option>
+                <option>BR04 Wanfang Hospital</option>
+                <option>BR05 Xinhai</option>
+            </optgroup>
+            <optgroup label="Blue Line">
+                <option>BL01 Dingpu</option>
+                <option>BL02 Yongning</option>
+                <option>BL03 Tucheng</option>
+                <option>BL04 Haishan</option>
+                <option>BL05 Far Eastern Hospital</option>
+                <option>BL06 Fuzhong</option>
+                <option>BL07 Banqiao</option>
+                <option>BL08 Xinpu</option>
+                <option>BL09 Jiangzicui</option>
+                <option>BL10 Longshan Temple</option>
+                <option>BL11 Ximen</option>
+                <option>BL12 Taipei Main Station</option>
+                <option>BL13 Shandao Temple</option>
+                <option>BL14 Zhongxiao Xinsheng</option>
+                <option>BL15 Zhongxiao Fuxing</option>
+                <option>BL16 Zhongxiao Dunhua</option>
+                <option>BL17 Sun Yat-Sen Memorial Hall</option>
+                <option>BL18 Taipei City Hall</option>
+                <option>BL19 Yongchun</option>
+                <option>BL20 Houshanpi</option>
+                <option>BL21 Kunyang</option>
+                <option>BL22 Nangang</option>
+                <option>BL23 Taipei Nangang Exhibition Center</option>
+            </optgroup>
+              </select>
+          
+              <!-- Dropdown for suggestions -->
+              <div id="searchDetails" style="display: none;">
+                  <p id="stationDetails">Station Info will appear here.</p>
+              </div>
+          </div> 
+          <!-- Reservation info block -->
+      </div>
+      <div id="reservationInfo">
+          Reservation Info
+          <div id="reservationDetails">
+            Reservation No. #3476IH<br>
+            Date 2024/05/12<br>
+            Start Time 10:00 a.m.<br>
+            End Time 12:00 p.m.<br>
+            Password ******
+          </div>
+      </div>
+      <div id="hotelInfo">
+          Deliver-to-Hotel
+          <div id="hotelDetails">
+            Grand Hyatt Taipei<br>
+            Palais de Chine<br>
+            Taipei Marriott Hotel<br>
+            Mandarin Oriental Taipei<br>
+            Regent Taipei<br>
+          </div>
+      </div>
+      <div id="moreLink"></div>
+          <div id="linkContainer" style="display: none;">
+              <a href="#" id="accountLink">ACCOUNT</a><br>
+              <a href="#" id="historyLink">HISTORY</a><br>
+              <a href="#" id="faqLink">FAQ</a><br>
+              <a href="#" id="contactLink">CONTACT US</a><br>
+              <a href="#" id="logoutLink">LOG OUT<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                  <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+              </svg></a><br> 
+          </div>
+          <div id="account" style="display: none;">
+              <h2>ACCOUNT</h2>
+              <div id="accountDetail">
+                  <ul style="list-style-type: none;">
+                      <li class="label">Email</li>
+                      <li class="detail"></li>
+                  
+                      <li class="label">Password</li>
+                      <li class="detail"></li>
+                  </ul>
+              </div>
+          </div>
+          <div id="history" style="display: none;">
+              <h2>HISTORY</h2>
+              <p class="historyTitle">
+                  <strong>2024/05/12 TAIPEI MAIN STATION</strong>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                  </svg>
+              </p>
+              <div class="historyDetail" style="display: none;">
+                  Reservation No. #3476IH<br>
+                  Date 2024/05/12<br>
+                  Start Time 10:00 a.m.<br>
+                  End Time 12:00 p.m.<br>
+                  Total Price $40<br>
+              </div>
+              <p class="historyTitle">
+                  <strong>2024/04/22 TAIPEI ZOO</strong>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                  </svg>
+              </p>
+              <div class="historyDetail" style="display: none;">
+                  <p>Reservation No. #123<br>
+                      Date 2024/05/12<br>
+                      Start Time 10:00 a.m.<br>
+                      End Time 12:00 p.m.<br>
+                      Total Price $40<br></p>
+              </div>
+          </div>
+          <div id="faqContainer" style="display: none;">
+              <h2>FAQ</h2>
+              <p class="faq-question">
+                  <strong>1. How to use this system?</strong>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                  </svg>
+              </p>
+              <div class="faq-answer" style="display: none;">
+                  <p>You can click on the station on the homepage map to deposit and deliver your luggage.</p>
+              </div>
+              <p class="faq-question">
+                  <strong>2. How to reset your password?</strong>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                  </svg>
+              </p>
+              <div class="faq-answer" style="display: none;">
+                  <p>You can reset your password by going to More → ACCOUNT → Forget Password.</p>
+              </div>
+          </div>
+          <div id="contactUs" style="display: none;">
+              <h2>CONTACT US</h2>
+              <form action="/action_page.php">
+                  <div class="input-wrapper">
+                      <input type="text" id="contactInput">
+                      <button type="submit" class="icon-btn">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                            <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"/>
+                          </svg>
+                      </button>
+                  </div>
+              </form>
+          </div>
+  
+      </span>
+      <script>
+       
+     document.getElementById('confirm').addEventListener('click', function(event) {
+            var date = document.getElementById('myDatepicker').value;
+            var start = document.getElementById('start').value;
+            var end = document.getElementById('end').value;
+            var amount = document.getElementById('quantity').value;
+           
+            if (!date) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Warning',
+                    text: 'Please choose the date you want to deposit'
+                });
+                event.preventDefault();  // 阻止表單提交
+                return;  // 防止進一步執行
+            }
+
+            if (!start || !end) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Warning',
+                    text: 'Please choose the time.'
+                });
+                event.preventDefault();  // 阻止表單提交
+                return;  // 防止進一步執行
+            }
+            if(!amount){
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Warning',
+                    text: 'Please enter the amounts of your packages that want to store .'
+                });
+                event.preventDefault();  // 阻止表單提交
+                return;
+            }
+            else{
+                Swal.fire({
+        icon: 'success',
+        title: 'RESERVATION CONFIRMED!',
+        html: 'Your reservation no is!<br>Check your reservation status on RESERVATION Page.',
+        willClose: () => {
+            window.location.href = 'http://127.0.0.1:5501/src/main/resources/templates/DBMS_Fontend.html'; // 替换为你的目标页面 URL
+        }
+    }); 
+            }
+        });
+        
+        function fetchAllReservations() {
+        fetch(`/api/reservation/addreservation`)
+            .then(response => response.json())
+            .then(data => {
+            console.log('All Reservations:', data);
+            // Here you can update your UI with the fetched data
+        })
+        .catch(error => console.error('Error fetching reservations:', error));
+    }
+
+    function createReservation(reservation) {
+        fetch(`http://localhost:8080/api/reservation/addreservation`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(reservation)
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Reservation created:', data);
+                // Update your UI with the new reservation
+            })
+            .catch(error => console.error('Error creating reservation:', error));
+    }
+    document.getElementById('fetchReservations').addEventListener('click', function() {
+            fetchAllReservations();
+        });
+
+        document.getElementById('confirm').addEventListener('click', function() {
+            const date = document.getElementById("myDatepicker").value;
+            const start = document.getElementById("start").value;
+            const end = document.getElementById("end").value;
+            const amount = document.getElementById("quantity").value;
+            const description = document.getElementById("textinput").value;
+            const newReservation = {
+                depositdate: new Date(),
+                pickUpTimestamp: new Date(new Date().getTime() + 24 * 60 * 60 * 1000).toISOString(), // 24 hours later
+                depositOrDelivery: true,
+                deliveryID: 123,
+                statusPickedUp: false,
+                statusWaiting: true,
+                user: { userID: 1 },
+                locker: { lockerID: 1, stationID: 1 }
+            };
+            createReservation(newReservation);
+        });
+        
+      </script>
+<script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.3.5/air-datepicker.min.js"></script>
+<script src="../static/scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+
+</body>
+</html>
